@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/trademe-property-scout/static/css/main.615dbbd2.css",
-    "main.js": "/trademe-property-scout/static/js/main.725bba13.js",
+    "main.js": "/trademe-property-scout/static/js/main.c3e64a5f.js",
     "index.html": "/trademe-property-scout/index.html",
     "main.615dbbd2.css.map": "/trademe-property-scout/static/css/main.615dbbd2.css.map",
-    "main.725bba13.js.map": "/trademe-property-scout/static/js/main.725bba13.js.map"
+    "main.c3e64a5f.js.map": "/trademe-property-scout/static/js/main.c3e64a5f.js.map"
   },
   "entrypoints": [
     "static/css/main.615dbbd2.css",
-    "static/js/main.725bba13.js"
+    "static/js/main.c3e64a5f.js"
   ]
 }
