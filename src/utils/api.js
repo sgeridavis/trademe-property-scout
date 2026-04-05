@@ -1,5 +1,3 @@
-const API_KEY = process.env.REACT_APP_ANTHROPIC_API_KEY;
-
 const SYSTEM_PROMPT = `You are a New Zealand property buying assistant specialising in West Auckland. 
 You MUST respond with ONLY a valid JSON object — no explanation, no markdown, no preamble, no trailing text. Just raw JSON.`;
 
@@ -50,14 +48,9 @@ Return ONLY this JSON (no other text):
 
 Rules: Score 0-100 per dimension. Overall = weighted average using weights above. Use 0 for unknown numbers. Be honest and critical.`;
 
-  const response = await fetch('https://api.anthropic.com/v1/messages', {
+  const response = await fetch('/api/evaluate', {
     method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      'x-api-key': API_KEY,
-      'anthropic-version': '2023-06-01',
-      'anthropic-dangerous-direct-browser-access': 'true',
-    },
+    headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
       model: 'claude-sonnet-4-20250514',
       max_tokens: 1500,
@@ -86,14 +79,9 @@ export async function compareProperties(watchlist) {
 
   const prompt = `Compare these West Auckland properties for a family wanting to build a 70sqm granny flat for rental income:\n\n${summary}\n\nIn 4-5 sentences, which 1-2 should they prioritise viewing and why? Focus on granny flat potential, value for money, and practical considerations. Plain English only, no markdown.`;
 
-  const response = await fetch('https://api.anthropic.com/v1/messages', {
+  const response = await fetch('/api/evaluate', {
     method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      'x-api-key': API_KEY,
-      'anthropic-version': '2023-06-01',
-      'anthropic-dangerous-direct-browser-access': 'true',
-    },
+    headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
       model: 'claude-sonnet-4-20250514',
       max_tokens: 500,
