@@ -1,9 +1,7 @@
 {
-  "homepage": "https://sgeridavis.github.io/trademe-property-scout",
   "name": "trademe-property-scout",
   "version": "1.0.0",
-  "homepage": "https://sgeridavis.github.io/trademe-property-scout",
-  "description": "AI-powered property evaluation tool for West Auckland house hunting",
+    "description": "AI-powered property evaluation tool for West Auckland house hunting",
   "private": true,
   "dependencies": {
     "react": "^18.2.0",
